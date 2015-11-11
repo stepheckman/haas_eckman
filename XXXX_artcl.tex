@@ -1,0 +1,176 @@
+\section{Introduction}
+
+This template provides an overview of typesetting an SRM Article with
+\LaTeX. The Source files also provide examples for typical typesetting
+techniques.
+
+\section{Filename convention}
+
+All files should be renamed such that the XXXX in the filename becomes
+the entry number. If the entry number is XXXX,
+
+\bci
+\item Title, abstract, etc. should be stored in  \texttt{XXXX\_header.tex}
+\item The article should be stored in \texttt{XXXX\_artcl.tex}
+\item Table 1, Table 2 $\ldots$ Table K, should be stored in
+  \texttt{XXXX\_tab1.tex}, \texttt{XXXX\_tab2.tex} $\ldots$
+  \texttt{XXXX\_tabK.tex} 
+\item The Bibliography is created with BibLatex (Biber) from a BibTex
+  file in \texttt{XXXX\_bib.bib}
+\item Figure 1, Figure 2 $\ldots$ Figure K, should be stored in
+  \texttt{XXXX\_fig1.tex}, \texttt{XXXX\_fig2.tex} $\ldots$
+  \texttt{XXXX\_figK.tex} (if any)
+\item The appendix should be stored in \textrm{XXXX\_appendix.tex} (if
+  any) \eci
+
+\section{Typesetting rules}
+
+We follow the rules of the APA Publication Manual. Most of the rules
+are implemented thru srm\_main.tex, but please
+
+
+\bci
+\item do not use bold face in the text body
+\item do not use vertical lines in tables
+\item do not use italics for proper english words in equations should.
+\item use identical symbols for math symbols in the text body and in equations
+\item take care that separators, hyphen, minus-sign differ in
+  length. Look -- as an example -- on on the minus-sign in the equation $1-1=0$
+\item prevent parentheses in parentheses in the text body; 
+\item use ``double quotation marks''. The rule is: ``We use `single
+  quotation marks' only inside  double quotation marks''.
+\eci
+
+If in doubt  refer the the APA publication manual, 6th edtion.
+
+
+\section{Section headings}
+
+We use sections, subsections and subsubsections. Not
+more. Never. Unlike APA 6, we we number sections and subsection. The
+file \texttt{srm\_main.tex} does this automatically.
+
+\section{Itemize and Enumerate}
+
+
+Itemlist are typesetted with the ``APAitemize''
+environment. Enumeration is typesetted with the ``APAenumerate''
+environment. The former can be started/closed with the LaTeX commands
+``bci'' and ``eci'', while the latter can be started/closed with
+``bce'' and ``ece''. Example. The code
+
+\begin{scriptsize}
+\begin{verbatim}
+\bce
+\item bla bla
+\item more bla bla
+\ece
+\end{verbatim}
+\end{scriptsize}
+
+creates this
+
+\bce
+\item bla bla
+\item more bla bla
+\ece
+
+\section{Tables}
+
+Tables are typesetted in a table environment or table* environment --
+depending on the size of the table. The table* environment is for wide
+tables. Inside the table we allways use threeparttable as shown in the
+code below:
+
+\begin{scriptsize}
+\begin{verbatim}
+\begin{table}
+  \begin{threeparttable}[b]
+  
+  
+  
+    \caption{The caption of the table}
+    \begin{tabular}{l.{2}.{2}}
+      \toprule
+      Left aligned header & \mc{numheader 1} & \mc{numheader 2} \\ 
+      \midrule
+      Two digit numbers & 1.34 & 0.20\tmark{a} \\
+      More two digit numbers & 1.50 & 1.23 \\ \midrule
+      Zero digit number & \mc{300} & \mc{300} \bottomrule
+    \end{tabular}
+    \vspace{.5em}
+    \begin{tablenotes}\small
+    \item We start with a general footnote, if any. Note that we don't
+      want too many signficance stars.
+      
+    \item [a] A footnote for footnote signs. Significance footnote
+      come last.
+      
+    \item $*$ p<0.05
+    \item $**$ p<0.01
+    \item $***$ p<0.001
+
+
+    \end{tablenotes}
+  \end{threeparttable}
+\end{table}
+\end{verbatim}
+\end{scriptsize}
+
+Which leads to Table 1.
+
+\input{XXXX_tab1.tex}
+
+
+\section{Figures}
+
+
+Figures must be provided as scalable vector graphs, EPS or
+PDF. Figures are included in the article as follows:
+
+\begin{verbatim}
+\begin{figure}
+  \centering
+  \includegraphics[width=\linewidth]{XXXX_fig1}
+  \caption{The caption as provides by the author}
+\end{figure}
+\end{verbatim}
+
+\section*{Acknowledgements}
+
+Acknoledgements comes last. They are typsetted with the starred
+version of section, i.e. 
+
+\begin{verbatim}
+\section*{Acknowledgements}
+\end{verbatim}
+
+\section{Bibliography}
+
+We use Biblatex for the Biobliography. You can find the full
+descritpion of BibLateX on the internet, but examples for the the main
+functions are shown below:
+
+\bci
+\item The normal cite is for citations without parentheses. Example:
+  \cite[see][pg.\,12]{carrasco03}
+\item parencite is for citations in parentheses. Example:
+  \parencite[see][pg.\,12]{dept10}
+\item textcite if for text citations. Example: 
+  \textcite[see][pg.\,12]{dorer11}.
+\item For special situations there are also the parencites and
+  textcites commands. Here is an example with parencites: 
+  \parencites(See)(and the
+  introduction)[35]{fitzgerald11}[78]{dorer11}[23]{goerman07}. See the
+  BibLatex manual for details. 
+\eci
+
+Note that you must use the command ``biber'' to create the actual
+Bibliography instead of bibtex. 
+
+
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "srm_main"
+%%% End: 
