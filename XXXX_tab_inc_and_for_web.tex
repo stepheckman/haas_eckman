@@ -1,0 +1,21 @@
+\begin{threeparttable}[H]
+	\centering
+	\singlespacing
+	\caption{Web: average treatment effects and naive estimations for variables income and Item non-response of income}
+	\label{tab:inc_and_for_web}
+	\begin{tabularx}{\textwidth}{@{}Xp{0.1cm}p{1.5cm}p{1.5cm}p{1cm}p{1cm}p{1.5cm}}
+		&               &     &       &     &    &       \\
+		& & ATE & naive \newline esti-mation & \(N_{treated}\) & \(N_{control}\) & Misreports \newline in \newline percent \\
+		\midrule\addlinespace
+		Income (n=357)& &-    &620.31 \newline (1382.31) &188 & 169 &8223.02\tnote{a}  \\ \addlinespace \addlinespace
+		Item non-response income (n=551) &        &-0.01 \newline (0.05)    &0.03 \newline (0.04) &297 &254&35.2                 \\  \addlinespace
+		\bottomrule                         
+	\end{tabularx}
+	\begin{tablenotes}
+		\begin{footnotesize}
+			\item[a] Misreport is not stated in percent but in Euros
+			\item{Note: Standard errors in parentheses}
+			\item{*\(p \le 0.05\), **\(p \le 0.01\), ***\(p \le 0.001\)}
+		\end{footnotesize}
+	\end{tablenotes}
+\end{threeparttable}

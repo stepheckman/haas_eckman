@@ -1,0 +1,26 @@
+\begin{threeparttable}[h]
+	\centering
+	\singlespacing
+	\caption{CATI: average treatment effect and naive estimations for the employment variables of the first loop}
+	\label{tab:emp_loop1}
+	\begin{tabularx}{\textwidth}{@{}Xp{0.1cm}p{1.5cm}p{1.5cm}p{1cm}p{1cm}p{1.5cm}}
+		&               &     &       &     &    &       \\
+		& & ATE & naive \newline esti-mation & \(N_{treated}\) & \(N_{control}\) & Misreports \newline in \newline percent \\
+		
+		\textit{employment Status}                                   	 							&               &   &  &            &                & \\ \midrule\addlinespace 
+		Error indicator (n=669) &	 &0.03 \newline (0.03)    &0.03 \newline (0.03)           &365 & 304 &14.6               \\ \addlinespace \addlinespace
+	 Error indicator - stated employed (n=588) &        &0.02 \newline (0.03)    &0.01 \newline (0.02) &323 &265&8.7                 \\  \addlinespace\addlinespace
+	Error indicator - stated non-employed (n=82) & &-&0.24*\newline (0.11)&42&39&58.0 \\ \addlinespace \addlinespace
+		\textit{begin date of employment}                               								&&&& & \\ \midrule\addlinespace
+	 Minimum deviation from true date (n=581) &            &1.78\newline (1.36)&1.36\newline (1.42)&320&261&3.37\tnote{a} \\ \addlinespace \addlinespace
+	Respondent choose season or do not know (n=742)  &     &0.03\newline (0.02)&0.02\newline (0.02)&405&337&8.4 \\ \addlinespace
+		\bottomrule                         
+	\end{tabularx}
+	\begin{tablenotes}
+		\begin{footnotesize}
+			\item[a] Misreport is not stated in percent but in months
+			\item{Note: Standard errors in parentheses}
+			\item{*\(p \le 0.05\), **\(p \le 0.01\), ***\(p \le 0.001\)}
+		\end{footnotesize}
+	\end{tablenotes}
+\end{threeparttable}

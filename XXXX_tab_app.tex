@@ -1,0 +1,67 @@
+\begin{table}[h]
+	\centering
+	\caption{CATI: Means of the minimum deviation from the true date for each CATI loop}
+	\label{tab:mean_dates_cati}
+	\begin{tabularx}{\textwidth}{Xc}\addlinespace
+		
+		&Mean in months            \\\addlinespace
+		\midrule \addlinespace
+		Minimum deviation from true date (loop 1)      &   3.4  \\ \addlinespace
+		Minimum deviation from true date (loop 2)  & 2.0 \\\addlinespace
+		Minimum deviation from true date (loop 3)  & 0.9\\\addlinespace
+		\bottomrule                         
+	\end{tabularx}
+\end{table}
+
+
+\begin{table}[h]
+	\centering
+	\caption{CATI: Two sample T-tests for the minimum deviation from the true date for each loop}
+	\label{tab:t-test_date}
+	\begin{tabularx}{\textwidth}{Xrrr}\addlinespace
+		&loop1 vs loop2 &  loop1 vs loop3 &  loop2 vs loop3              \\ \addlinespace
+		\midrule \addlinespace
+		t-value& 28.33&36.65&17.32 \\ \addlinespace
+		degree of freedom&778&884&302 \\ \addlinespace
+		p-value&\textless0.0001&\textless0.0001&\textless0.0001 \\ \addlinespace
+		\bottomrule                         
+	\end{tabularx}
+\end{table}
+
+\begin{table}[h]
+	\centering
+	\caption{CATI: number of variables with standardized differences \textgreater 5, highest deviation and mean bias for the standardized mean differences after applying the entropy balance model}
+	\label{tab:standardCATI}
+	\begin{tabularx}{\textwidth}{lXXXX}
+		& number before weighting &number after weighting & highest deviation after weighting & Mean Bias after weighting\\          
+		\midrule
+		Employment status (loop 1)                                     	 				&&               &  &               \\ \addlinespace
+		  \ \ \ \ - error indicator (n=670)  			&20	&0&0.0 & 0.0  \\ \addlinespace
+		  \ \ \ \ - error indicator - stated employed (n=588)           &29 &0&0.0 & 0.0     \\  \addlinespace
+		  \ \ \ \ - error indicator - stated non-employed (n=82)    & 42 & 20 & 48.1 &14.2 \\  \addlinespace  \addlinespace
+		begin date of employment (loop 1)           &&                   						&               &  \\ \addlinespace
+		  \ \ \ \ - Minimum deviation from true date (n=581)        &  27   &0&0.0 & 0.0		\\  \addlinespace
+		  \ \ \ \ - Respondent choose season            &   21        &0&0.1& 0.0		 \\  \addlinespace
+		\ \ \ \ \ \ or do not know (n=743)                               &&    				&& \\ \addlinespace \midrule \addlinespace
+		Employment status (loop 2)                                     	 				&  &&             &                 \\ \addlinespace
+		  \ \ \ \ - error indicator (n=232)  		&	31	&17   &  14.0&4.9 \\ \addlinespace
+		  \ \ \ \ - error indicator - stated employed (n=125)      &36      &          19     &24.4&8.5               \\  \addlinespace
+		  \ \ \ \ - error indicator - stated non-employed (n=107)   & 44  &22&38.2&19.9 \\  \addlinespace  \addlinespace
+		begin date of employment (loop 2)             &&                 						&               &  \\ \addlinespace
+		  \ \ \ \ - Minimum deviation from true date (n=199)          & 24  &8& 13.8	&3.1	\\  \addlinespace
+		  \ \ \ \ - Respondent choose season              &  28       &13&	9.4&3.7	 \\  \addlinespace
+		\ \ \ \ \ \ or do not know  (n=250)                                  	&&			&& \\ \addlinespace \midrule \addlinespace
+		Employment status (loop 3)                                     	 				&             &  &    &             \\ \addlinespace
+		  \ \ \ \ - error indicator (n=185)  	&34			&     31  &  32.7&9.3\\ \addlinespace
+		  \ \ \ \ - error indicator - stated employed (n=105)         &38    &   28& 32.8&  10.5  \\  \addlinespace
+		  \ \ \ \ - error indicator - stated non-employed (n=80)  & 41  & 24  &44.4&20.9            \\  \addlinespace  \addlinespace
+		begin date of employment (loop 3)                           &&   						&               &  \\ \addlinespace
+		  \ \ \ \ - Minimum deviation from true date (n=105)          & 38  &28& 32.8	&10.5	\\  \addlinespace
+		  \ \ \ \ - Respondent choose season          &  30           &29&	20.4&8.4	 \\  \addlinespace
+		\ \ \ \ \ \ or do not know  (n=128)                        &&           				&& \\ \addlinespace \midrule \addlinespace
+		Error indicator for income     (n=526)                            	 		 &32 &               	0&0.0&0.0 \\ \addlinespace
+		Item non-response income (n=624)	     &                            21&               	0&0.0&0.0 \\ \addlinespace
+		Error indicator for citizenship (n=916)                                       &20&              	0&0.0&0.0 \\ \addlinespace
+		\bottomrule                         
+	\end{tabularx}
+\end{table}
