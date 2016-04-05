@@ -1,0 +1,33 @@
+\begin{landscape}
+\begin{threeparttable}
+\caption{Average Treatment Effect and naive estimations}
+\label{tab:tab_estimates}
+\begin{tabular}{p{4.5cm}p{1.5cm}p{1.5cm}p{1cm}p{1cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1cm}p{1cm}p{1.5cm}}
+& \multicolumn{5}{c}{CATI} & \multicolumn{5}{c}{WEB}  \\ \addlinespace
+\cmidrule(r{0.25em}){2-6} \cmidrule(l{0.25em}){7-11}
+& ATT              & naive \newline estimation & \(N_{treated}\) & \(N_{control}\) & Misreports \newline in percent & ATT          & naive \newline estimation & \(N_{treated}\)  & \(N_{control}\) & Misreports \newline in percent \\ \addlinespace
+\textit{employment Status}               &                  &                  &            &            &                       &              &                  &     &          &                       \\ \hline \addlinespace
+Error indicator                     & 0.02 (0.03)       & 0.02 (0.03)      & 403        & 333        & 16.44                 & 0.03 (0.03)   & 0.02 (0.03)       & 190 & 175      & 6.3                   \\ \addlinespace
+Error indicator - stated employed        & 0.01 (0.02)      & 0.00 (0.02)      & 322        & 261        & 8.23                  & 0.03 (0.03)  & 0.02 (0.03)       & 190 & 175      & 6.3                   \\ \addlinespace
+Error indicator - stated non-employed    & --                & 0.09 (0.08)      & 81         & 72         & 47.71                 & --            & --                & --   & --        & --                     \\ \addlinespace
+\textit{begin date of employment}        &                  &                  &            &            &                       &              &                  &     &          &                       \\ \hline \addlinespace
+Minimum Deviation from true date         & 0.39 (0.19)*     & 0.32 (0.20)      & 322        & 261        & 0.95\tnote{a}                  & -1.13 (1.03) & -1.25 \newline (0.8)      & 190 & 175      & 1.1\tnote{a}                   \\ \addlinespace
+Respondent choose season or do not know  & 0.03 (0.02)      & 0.01 (0.02)      & 411        & 344        & 8.34                  & 0.03 (0.05)  & 0.02 (0.04)      & 237 & 213      & 8.26                  \\ \addlinespace
+\textit{wage variables}                           &                  &                  &            &            &                       &              &                  &     &          &                       \\ \hline \addlinespace
+Income                              & 127.01 (846.709) & -367.86 (707.34) & 288        & 241        & 2545.46\tnote{b}                & --            & 514.74 (1375.5)  & 191 & 173      & 1996.7\tnote{b}             \\ \addlinespace
+Item non-Response income                 & 0.02 (0.03)       & 0.03 (0.03)       & 346        & 282        & 15.92                 & 0.00 (0.05)  & 0.03 (0.04)      & 300 & 259      & 47.7                  \\\addlinespace
+\textit{Error indicator for citizenship} & 0.02 (0.01)      & 0.02 (0.01)      & 510        & 439        & 2.21                  & --            & --                & --   & --        & --   \\ \bottomrule                 
+\end{tabular}
+\vspace{.5em}
+    \begin{tablenotes}\small
+    \item Note: Standard errors in parentheses
+      
+    \item [a] Misreport is not stated in percent but in months \newline
+    \item [b] Misreport is not stated in percent but in Euros 
+      
+    \item $*$ $p<0.05$
+    \item $**$ $p<0.01$
+    \item $***$ $p<0.001$
+    \end{tablenotes}
+\end{threeparttable}
+\end{landscape}
