@@ -1,0 +1,88 @@
+\section{Dependent variables for the treatment effect estimation}\label{variables}
+
+This study cannot test all existing variables in the data. The reason therefore is that the data structure for questions asked in the survey is not equal to the data structure of the administrative data. Therefore adjustment is necessary and the analysis is limited on a few variables. The items of interest are employment status, begin of employment, nationality and income. There are differences in terms of number of analyzable variables between the CATI and web survey because the latter is shortened. According to the hypotheses the measurement error should increase for the group that consented to the linkage question at the beginning, because respondents care less about accurately answering the questions (worse-respondent hypothesis). If the better-respondent hypothesis applies the measurement error should decrease because respondents may take more effort to answer the questions.
+
+\subsection{Employment variables}
+
+We focus on two employment variables and their peculiarities. First is the current employment status\footnote{Translation by first author.}:
+
+\begin{quote}
+\begin {small}
+In the following I like to talk with you about your job biography over the last years. We like to know for example if you were employed, in vocational training or reported as unemployed or if you did something completely different. It is important that you mention every activity in particular, even if it lasted just for a short time. If several activities took place at the same time, please mention your main employment.
+
+Let us start with today: what of the following applies to you? Are you currently \ldots
+
+1 employed, that also includes side- or mini jobs
+
+2 reported as unemployed, that also includes a participation in an active labor market program from the federal agency of employment
+
+3 student
+
+4 in advanced training, vocational training or applicant of a college
+
+5 something completely different
+
+* do not know/ no answer
+
+(Interviewer) Note: If there were parallel periods of employments the employment with the highest amount of working hours is the most wanted. Under employment we want also capture side-jobs of students, housewives and pensioners. So called mini-jobs (also referred to as 400 or 450 \euro \ jobs) are included too.
+\end{small}
+\end{quote}
+
+We recode this question to a binary variable whereas employed is still classified as employed and all other categories are classified as non-employed (except for do not know and no answer, these are missing values). After this question a number of other questions followed to get information about the period of employment or unemployment.
+
+We check with the administration data if the respondent misreports about his\textbackslash her employment or not.
+
+There are certain problems, if one wants to compare the employment status from a survey with the employment status from the Integrated Employment Biographies data. As written before the administrative data is structured in spells about employment and unemployment periods. Their transitions can be categorized in flow, overlap and gap (see \ref{admin} Administrative data, p. \pageref{admin}). These different kinds of transitions make it really hard to compare the values because we can not just take the current spell and compare it with the answer. We could get a benefit drawing spell but actually the respondent is employed of a minimum wage basis.
+
+Another problem is that we cannot account for progress in the job. For example a person begins his\textbackslash her employment as an intern. After that (s)he gets a full-time employment with a flow transition. For the next ten years until today (s)he gets promoted four times and becomes a new employment position with another role, tasks and maybe another job location within his\textbackslash her establishment\footnote{Please remember that every time something changes in the job situation of a person a new spell will be generated}. If we ask, whether this person is employed or not, we can approve that (s)he is. But when did his\textbackslash her employment actually start: with his\textbackslash her internship, the begin of full-time employment, the last promotion or anything in between?
+
+There are various other combinations of biographies. This study cannot explore or account for all of these combinations by collapsing and sorting the spells from the administrative data. Fact is that there is a huge room for interpretation for the respondents to answer. If we collapse and sort the spells, we get messed up data and analyses. Therefore we have to approach differently.
+
+To figure out if the respondent stated the right employment status to the time of the interview, we use the begin date of his\textbackslash her current employment status. For each category that the respondent could choose for their employment status, the begin date was asked too. That means there should be no change in employment status after this date.
+
+The second question of interest I focus on is a follow up question about the start date of the employment:
+
+
+\begin{quote}
+\begin {small}
+
+When did your current period of employement which this employer begin?
+
+\end{small}
+\end{quote}
+
+The respondents had the chance to state the month and year of the begin date. To calculate the measurement error variable, I take the minimum difference between the date stated in the survey and the dates in the administrative data employment spells as the deviation from the true score. The deviation is an absolute value \((\Delta_{begin \ date}\geq0\)) to ensure that negative and positive deviations do not cancel each other out in the analysis.
+
+For respondents exact dates are the hardest to remember (\cite{Wagenaar86},\cite{Friedman93}). Luckily the respondents had only to remember the month and the year.
+
+In the CATI Survey, if respondents did not know about the month in which their employment began, they had the chance to state a season instead. Worse-respondents should be more likely to use this option because they try to avoid the cognitive effort of searching the exact month in their memory. It is also possible that the respondent fails to retrieve a season. Therefore we have item non-response. For the study we do not stagger between item non-response and choose a season instead of a month but see both as a refusal to retrieve an exact month. Anyway, if the consent to the administrative data linkage question leads to better-respondents, respondents who consented at the beginning should have stated the month more often than if they would have not consented.
+
+Respondents could not state a season in the web survey as they were asked about a begin month. Therefore this categories that trigger the behavior to put less effort to answer the question drop out. For the web survey the item non-response for the begin date is stated regardless of whether the respondent did not know the month or the year of his\textbackslash her current employment.
+
+Concerning the hypotheses the outcomes should be the same for the web data as for the CATI data.
+
+%To ensure valid measurement errors we only use cases which stated an begin date of employment before 1993 for the error indicator of employment status and the minimum deviation of the begin date of employment. In west Germany the record of employment biographies started in 1975. For east Germany it started 1993. Between the reunion of Germany and the start of recording employment biographies are three years with high mobility of german citizens. In this period we cannot be for sure if respondents worked in east or west Germany. If they worked in east Germany the
+
+\subsection{Citizenship and Income}
+
+This study evaluates the measurement error on two additional variables. The first one is the variable `Citizenship', whether the respondent is German or not. The nationality of most persons does not change over one year and thus it is okay to test even if the data has a one year gap. Unfortunately this question was not asked in the web survey and can therefore only be tested for the CATI data.
+
+The second variable added is the `Income'. The income in the survey data was asked for a specific period of the loop and refers to the year of 2013\footnote{Translation from author.}:
+
+
+\begin{quote}
+\begin {small}
+
+What was your gross annual income from this job [occupation from the loop] in year 2013?
+
+(Interviewer) Note: Please do not include any extra payments , such as vacation allowance, Christmas allowance, an extra monthly salary, profit participations or bonuses.
+
+\end{small}
+\end{quote}
+
+
+Since the Integrated Employment Biographies has the data until the end of 2013, it can be compared. The deviation of the true income is similarly as the begin date stated in absolute values to ensure that negative and positive values do not cancel each other out.
+
+Income is a sensitive question (\cite{Tourangeauetal07}). If there is a measurement error due to consenting to linkage at the start of the survey, this variable should show it, because even if the respondents already consented to a sensitive question (the administrative data linkage question) the income question has another quality of intrusiveness. Asking for linkage consent is very conceptional and respondents can only imagine what kind of data the administration data contains. The income question on the other side is more in someones reach because money plays such an important role in a lot of peoples life's. The effect for worse-respondents and better-respondents should get amplified. In addition, to summarize the income of one or more jobs in one year needs a lot of cognitive effort and therefore our hypotheses should apply even if the hypothesis about the different quality of intrusiveness is wrong.
+
+As income is a sensitive question we have a high item non-response rate for this variable (16.9\% for CATI and 35.2\% for web). Therefore we check if the these rates change between the treatment and control group. If the worse-respondents hypothesis applies we should have a higher item non-response rate for the treatment group. The cognitive effort of summarizing the income for 2013 should be amplified by the sensitivity. Better-respondents on the other side should not show a strong effect because the sensitivity of income counters it. That means even if better-respondents try to optimize their responses, they non-respond because the income question may be to intrusive.

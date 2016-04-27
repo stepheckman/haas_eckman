@@ -1,33 +1,36 @@
 \renewcommand{\arraystretch}{0.8}
 \begin{table*}[h]
- \caption{ Variables used for the entropy balance model}\label{tab:covariates}
-\begin{tabular}{lll}
+ \caption{Variables Used in Entropy Balance Model}\label{tab:covariates}
+\begin{tabular}{llc}
   \addlinespace \toprule\addlinespace
-\textbf{administrative data} &Sociodemographics &  Gender\\ \addlinespace
-&							&Year of birth \\ \addlinespace
-&							&Education\\ \addlinespace
-&							&professional education\\ \addlinespace 
-&							&West/East Germany\\ \addlinespace			
-&Labor market history				& Share of different employers\\ \addlinespace 
-&							& Mean duration, Total duration  \\
-&							& and Number of spells \\ \addlinespace
-&							&  \ \ \ - UBII receipt   \\ \addlinespace
-&							&  \ \ \ - UB I receipt \\ \addlinespace
-&							& \ \ \ - ALMP participation \\ \addlinespace
-&							&\ \ \  - Employment\\ \addlinespace
-&							& \ \ \ - Unemployment \\ \addlinespace
-&							& \ \ \ - Job seeking \\ \addlinespace \addlinespace
- \midrule \addlinespace
-\textbf{Sample}&						&Sample Experiment \\ \addlinespace
- &							&Loss/Gain-frame experiment \\ \addlinespace \addlinespace
- \midrule \addlinespace
-\textbf{Interviewer variables}  &			&Age\\ \addlinespace
-(CATI only)&							&Gender\\ \addlinespace
-&							&Experience\\ \addlinespace
-&							&Education\\ \addlinespace \addlinespace
- \midrule \addlinespace
-\textbf{Call record data}	 &				& Number of contacts\\ \addlinespace
- (CATI only)&							& Contact time\\ \addlinespace
+  Source & Variable & $\epsilon_{j,i}$ as indicator \\
+\midrule
+\textbf{Administrative data} &  Gender & X \\ 
+							&Year of birth \\ 
+a							&Education (how measured?) & X \\ 
+							&Professional Education (how measured?) & X \\ 
+							&West or East Germany & X\\ 
+                            \addlinespace			
+						& Share of different Employers  (how measured?)\\ 
+							& Spells: Count, Mean Duration, Total Duration\\ 
+						&  \ \ \ - Income-Support Receipt   \\ 
+							&  \ \ \ - Unemployment Benefit Receipt \\ 
+							& \ \ \ - Active Labor Market Programs \\ 
+							&\ \ \  - Employment\\ 
+							& \ \ \ - Unemployment \\ 
+							& \ \ \ - Job seeking \\ 
+ \addlinespace
+\textbf{Experimental Conditions} & Gain- vs Loss-Framing in Consent Question & X \\
+& Opt-Out vs Control Group in Contact Data Transfer & X \\ 
+ \addlinespace
+\textbf{Paradata}  			& Interviewer Characteristics \\ 
+							& \ \ \ - Age \\ 
+							& \ \ \ - Gender & X \\ 
+							& \ \ \ - Experience (how measured?) & X? \\
+                            & \ \ \ - Employment (how measured?) & X \\ 
+\addlinespace
+					& Number of contacts \\ 
+					& Contact time (how measured?) \\ 
  \bottomrule
  \end{tabular}
 \end{table*}

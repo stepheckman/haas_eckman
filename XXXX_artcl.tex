@@ -30,227 +30,82 @@ There are two different ways how the treatment effect of the administrative data
 %The response process is not necessarily linear but a process that can skip stages and contains overlaps between the stages. In fact many things can go wrong. In the comprehension process. Respondents may not notice introductions to the question or do not bother to read them. Further they can run across unfamiliar terms or the question requests detailed information that the respondent does not have. One major problem in asking questions is the different meaning that researchers and respondents have about a specific term (\cite{Tourangeauetal00}).
 
 
-\section{Data}
-\subsection {Survey data}
+\section{Data Sources}
+To test our two compting hypotheses, we exploit a data set that combines responses from a telephone survey and administrative data. The link to administrative data lets us caclulate measurement error and test the effect of granting linkage consent at the beginning of the survey on response accuracy.
 
-To test our two hypotheses, we use a mixed mode survey conducted by the Institute for Employment Research. The main purpose of the survey was to investigate different methods of protecting individual privacy and transferring selected addresses to a data collection contractor (CITE REPORT OR PRESENTATION ON THIS SURVEY), but it also contained a consent experiment that we can exploit. The selected sample contained 7,183 persons selected from administrative records. 1,034 cases completed the telephone survey, which took place from October to December, 2014. NOnrespondents were then approached for a web survey, but we do not data from the web survey in this investigation.
+\subsection {Survey data}\label{sec:survey}
+The Institute for Employment Research conducted a survey in Fall 2014 to investigate different methods of protecting individual privacy and transferring selected addresses to a data collection contractor (See CITE KREUTER SAKSHAUG TOURANGEAU IN NEW JSSAM ISSUE for results of the wording experiment (PLACEMENT TOO?)). Luckily, for our purposes, this survey also contained a consent experiment that we can exploit to test our hypotheses. The selected sample contained 7,183 persons selected from administrative records. 1,034 cases completed the telephone survey, which took place from October to December, 2014.\footnote{Nonrespondents were then approached for a web survey, but we do not data from the web survey in this investigation.} The response rate is XY\% (APPOR RR1). CITE FOR AAPOR RR NEEDED. GEORG -- FILL IN RR HERE
 
-LET'S REVIEW THESE NUMBERS TO MAKE SURE THEY'RE THE ONES WE WANT
+\texttt{Why 1034 here? does not match 1208 or 1128 given below. LET'S REVIEW THESE NUMBERS TO MAKE SURE THEY'RE THE ONES WE WANT}
 
-The survey contained experiments to evaluate the effects of wording and placement of the administrative data linkage question on consent rates. Approximately half of the respondens were asked at the beginning ofthe survey (n=611) and half were asked at the end (n=592).
-The wording experiemnt on this question involved gain versus loss framing (EXAMPLES HERE). Because the wording experiment was fully crossed with the placement experiment and did not significantly affect consent rates in the survey (CITE), we ignore it in our analyses.
+The survey contained three fully-crossed experiments. Two experiments were designed to evaluate the effects of wording and placement of the administrative data linkage question on consent rates. Approximately half of the respondens were asked at the beginning ofthe survey (n=611) and half were asked at the end (n=592). The wording experiemnt on this question involved gain versus loss framing, where gain framing is XYZ and loss framing is ABC. Table \ref{tab:consentrates} shows that linkage consent rates were higher when the question was asked in the beginning, as shown in previous studies. The table also shows that the wording experiment did not significantly affect consent rates in the telephone survey. FOr more analysis of these two consent experiments, see CITE.
 
-Before the survey started, cases were randomly divided into two groups: an Opt-Out group and a control group. (This experiment was fully crossed with the consent quetsion wording and placement experiments). Opt-Out group was mailed a letter describing the telephone survey and given an opportunity to refuse the transfer of their contact inforation data to the survey firm by returning a postcard. Those who did not return were postcard were assumed to have given their consent. The contact information for cases in the control group was passed to the survey firm in the usual way, with no opportuity to refuse. This experiment was mandated by XYZ MORE HERE, and also included an Opt-In group, but due to small sample sizes and concerns about selection bias among this group, we drop it from our analyses. For more details on this experiment, see CITE SAKSHAUG PAPER. 
+\texttt{911 + 592 = 1203 -- ??}
 
-In the Opt-Out group 42\% of the 5,000 selected people refused take part. 
+\include{XXXX_tab_consentrates}
 
-All cases with valid telephone numbers (n=7,183) were first fielded via telephone and 1,034 were interviewed. 
+The survey contained an additional experiment, fully crossed with the two consent experiments, that we do not exploit for this analysis but which warrants mention. Before the survey started, cases were randomly divided into two groups: an Opt-Out group and a control group. (This experiment was fully crossed with the consent quetsion wording and placement experiments). Opt-Out group was mailed a letter describing the telephone survey and given an opportunity to refuse the transfer of their contact inforation data to the survey firm by returning a postcard. Those who did not return were postcard were assumed to have given their consent. The contact information for cases in the control group was passed to the survey firm in the usual way, with no opportuity to refuse. This experiment was mandated by XYZ MORE HERE, and also included an Opt-In group, but due to small sample sizes and concerns about selection bias among this group, we drop this group from  our analysis data set. For more details on this experiment, see CITE SAKSHAUG PAPER. 
 
-The response rate is XY\% (APPOR RR1). CITE FOR AAPOR RR NEEDED
+In the Opt-Out group 42\% of the 5,000 selected people refused take part. MORE HERE TO CONVINCE READER THAT GAIN/LOSS AND OPT-OUT/CONTROL NOT A PROBLEM
 
-GEORG -- FILL IN RR HERE
+The questionnaire included questions on XYZ. Several of these questions match concepts in the administrative data and thus we can calculate measurment error in these variables.
 
-See CITE KREUTER SAKSHAUG TOURANGEAU IN NEW JSSAM ISSUE for results of the wording experiment (PLACEMENT TOO?)
-
+We also have access to paradata for this survey, including interviewer characteristics and call record data. 
 
 \subsection{Administrative data}\label{admin}
+With respondent permission, We can link the survey data described above to administrative data held by the German Federal Employment Agency to get additional variables for our analysis. The administrative data used for this study come from the Integrated Employment Biographies data set (IEB), which contains complete employment biographies of working-age persons: employment, receipt of two types of unemployment benefits and participation in active labor market programs. The data also contain personal characteristics such as date of birth, vocational training, nationality, gender and residence (\cite{Fitzenbergeretal05}). For this study, we use data from December 2014, which matches the field period.
 
-With respondent permission, We can link the survey data described above to administrative data held by the German Federal Employment Agency to get additional variables for our analysis. The administrative data being used for this study is the Integrated Employment Biographies (IEB), which contains complete employment biographies of  working-age persons: employment, receipt of two types of unemployment benefits and participation in active labor market programs. The data also contain personal characteristics such as date of birth, vocational training, nationality, gender and residence. (\cite{Fitzenbergeretal05}). For this study, we use data from December 2014, which overlaps with the end of the field period.
+The data are used by the Federal Employment Agency to calculate social security and unemployment insurance payments (see FDZ-Methodenreport 13/2014:6). NEED BIBTEX CITE HERE. For this reason, variables related to employment duration and receipt of unemployment benefits are of high quality, and those which are tendential to the administration of these programs (such as nationality and education) are of lower quality (CITES NEEDED -- FITZENBERGER?). As discussed below, we at times had to impute missing values in the administrative records. 
 
-The data are used by the Federal Employment Agency to calculate social security and unemployment insurance payments (see FDZ-Methodenreport 13/2014:6). NEED REAL CITE HERE. For this reason, variables related to employment duration and receipt of unemployment benefits are of high quality, and those which are tendential to the administration of these programs (such as nationality and education) are of lower quality (CITES NEEDED). As discussed below, we at times had to impute missing values in the administrative records. 
+Because the sample was selected from the same administrative data set that we are linking to and we have a unique identifier for each respondent, linking is rather straightforward, and we use exact linkage rather than statistical matching. However, we did encounter a few issues that caused us to drop some cases at the linking step. First, not all respondents consented to linkage of survey responses with administrative data (n=178) and we were not allowed to link those cases. Second, some respondents provided a gender or date of birth in the survey that did not match the records (n=19), leading us to think we may have spoken to the wrong family member. Third, others reported that they were government officials or self-employed; because these employment spells are not captured in the administrative data, we drop these respondents as well (n=38). Fourth, we drop cases where the administrative records are incomplete -- MORE DETAILS HERE, HOW MUCH MISSING DATA TRIGGERED DROPPING? (n=31). From the 1,208 cases that completed the telephone survey, we were able to link 1,128 of them and these cases form the basis of our analyses.\footnote{Note that the numbers appear not to sum because tehre are some cases that appear in more than one problem category.}
 
-Because the sample was selected from the same administrative data set that we are linking to and we have a unique identifier for each respondent, linking is rather straightforward, and we use exact linkage rather than statistical matching. However, we did encounter a few issues that caused us to drop some cases at the linking step. Some respondents provided a gender or date of birth in the survey that did not match the records, leading us to think we may have spoken to the wrong family member. We drop these cases (19 in telephone, 43 in web) from all analyses. Additional cases reported that they were government officials (\textit{Beamte}) or self-employed. These employment spells are not captured in the administrative data, so we drop these respondents as well.
-
-Finally we drop cases where the administrative records are incomplete. MORE HERE. Table \ref{tab:loss of cases} shows the number of cases lost in each mode and the number remaining. 
-
-\input{XXXX_tab_loss_of_cases}
-
-We use the administrative data for two purposes:
-\begin{itemize}
-\item create prop mode
-\item calc ME
-\end{itemize}
+THESE NUMBERS DO NOT MATCH SECTION 3.1
 
 
-%Officially the administrative data goes until the 31.12.2014. As the data is extracted, it is possible that not all spells are available because institutes fail to report them. It is common practice to add these missing spells in the follow up years. Therefore we have cases that have an incomplete number of spells. As these cases do not have an end date that equals the 31.12.2014 or later. We top code the analysis to this date. We have missing periods that we do not know anything about for every person that has not a spell that goes until this date. So I take these cases out so that they not bias the analyses. In total 31 cases are incomplete for the CATI and 20 cases for the web data. This may not seem reasonable at the time but will be explained later on as the variables will be presented (see section \ref{variables}, p. \pageref{variables}).
+\section{Treatment Effect Estimation Methods}\label{method}
 
-\section{Method}\label{method}
-
-To test our hypotheses, it is not sufficient to simply compare the responses of those who received the question at the beginning of the questionnaire with those who received it at the end. What we are interested in is not simply the effect of \textit{being asked} the consent question at the beginning, but the effect of \textit{giving consent} at the beginning. Thus, the most appropriate control group for our research question is a set of respondents who were \textit{not} asked at the consent question at the beginning, but who would have given consent, had they been asked. This group doe not exist, but we can use statistical techniques to construct it, taking advantage of the placement experiment in this survey. We build a consent propensity model to estimate the probability that each respondent would give consent, if s/he were asked the consent question at the beginning of the survey. The predictors in the propensity model come from administrative data, as described in the next section. The model used to construct the control group is described in Section \ref{method}. 
-
-
-We view the consent to the linkage question that is asked at the beginning of an interview as a treatment that motivates the respondents to change their response behavior. The average measurement error of this treated group \(\bar{\epsilon}_{treated}\) should be different from the average measurement error \(\bar{\epsilon}_{non-treated}\) if the same group would not have got the chance to answer the linkage question and therefore would have been non-treated.
+The linked survey and administrative data allow us to calculate measurement error in respondent reports and thus test our hypotheses. $\epsilon_{j,i}$,  measurement error in question $j$ for respondent $i$, is:
 
 \begin{equation}
-\bar{\epsilon}_{treated} \neq \bar{\epsilon}_{non-treated}
+\epsilon_{j,i} = \text{response}_{j,i} - \text{admin}_{j,i}
 \label{eq:hyp_epsi}
 \end{equation}
 
-We can now formally illustrate our hypotheses about better- and worse-respondents:
+However, we cannot simply compare the average measurement error among those who granted linkage consent at the beginning of the questionnaire with those who did so at the end, because the two sets of consenters are not equivalent.  Although assignment to the beginning and end experimental groups was random, the cases who consentd at the beginning are somewhat different than those who consented at the end (as we can see already in the differing consent rates in Table \ref{tab:consentrates}. 
 
-\begin{equation}
-\bar{\epsilon}_{treated} < \bar{\epsilon}_{non-treated} \ (Better-Respondents)
-\label{eq:hyp_better}
-\end{equation}
-\begin{equation}
-\bar{\epsilon}_{treated} > \bar{\epsilon}_{non-treated}  \ (Worse-Respondents)
-\label{eq:hyp_worse}
-\end{equation}
+The most appropriate control group for our research question is a set of respondents who were \textit{not} asked at the consent question at the beginning, but who \textit{would have given consent, had they been asked}. This group of course does not exist, but we can use statistical techniques to approximate it, taking advantage of the placement experiment in this survey. We use entropy balancing to derive weights that balance the observable characteristics of those who consented at the beginning and those who consented at the end. 
 
-To estimate \(\bar{\epsilon}_{non-treated}\) it would be the best, if we knew how the respondents would have answered if they had not been asked. Such counterfactual outcomes are not available because we can not observe that. Therefore we have to construct a replacement for the counterfactual outcomes to check the effect of consenting to the linkage question.
+Note that we cannot use the nonconsenting cases in our analyses, because we cannot calculate $\epsilon_{j,i}$ for the nonconsenters.
 
-One possible solution would be to compare the consenters against the non-consenters. The non-consenters are not exposed to the effect and therefore should be a good counterfactual group. Since we have a survey experiment were the respondents are randomly allocated to the linkage question at the beginning or at the end of the questionnaire, we have a large group of respondents that did not got the linkage question at the beginning. These are also not exposed to the effect and might be suitable as a counterfactual group.
+Entropy balancing is a technique developed by \cite{Hainmueller12} to achieve balance between treatment and control groups. Unlike earlier propensity score reweithing approaches, which first estimate a treatment propensity and then develop weights from teh estiamted propensity scores (CITE), entropy balancing takes a more direct approach. The technique imposes constraints on the first, second and third moments of the distributions of the observable characterists and then solves for weights that meet those constraints (\cite{Hainmueller12}). For example, we might require that all means (the first moment) differ by less than 1\% on all variables and the variances (the second moment) by less than 10\%. For this study we constrain only the first moment, the mean, which increases the likelihood the the method converges and is often sufficient to balance out the variance and skewness of further moments too (\cite{Hainmuelleretal13}).
 
-Both solutions lack some requirements. To estimate a change in response behavior we use the change in measurement error as an indicator. The measurement error is calculated from comparing the values of the survey data with the values from the administrative data. As we do not have any individual-related administrative data for non-consenters, we cannot calculate the measurement error for those. Therefore we cannot use non-consenters in the analysis.
+After developing a set of weights that balance the two sets of cases, we use these weights to test whether average measurement error is larger among the treament cases (worse-respondent hypothesis: $\bar{\epsilon}_{treated} > \bar{\epsilon}_{control}$) or smaller (better-respondent hypothesis: $\bar{\epsilon}_{treated} > \bar{\epsilon}_{control}$).
 
-The second approach -- using the respondents that got the linkage question at the end of the interview -- has the same limitation in terms that there are non-consenters in this group, which cannot be analyzed. That leaves the possibility to compare the consenters from the beginning with consenters from the end. But that would be a rather naive estimation, because our data suffers from selection bias.
+This appraoch to estimating treatment effects, like the earlier propensity score approaches, relies on three assumptions. First, the Stable Unit Treatment Value Assumption  Assumption (SUTVA), that the cases are independent and the effect of the treatment on one case does not depend on who else is in the treatment group (Rubin80, Holland86 FIX THESE CITES). This assumption should be satisfied in a telephone survey where the cases do not interact, but very strong interviewer effects in the consent question could be an issue here (\cite{Beste11}, \cite{Sakshaugetal13}, \cite{Salaetal10}). For this reason, we do control for some interviewer characteristics, as discussed below. Second, the overlap assumption requires that the treatment and control cases contain persons with similar characteristics, on both observed and unobserved variables (\cite{Heckmanetal98}). For example, it should not be the case that all persons who concented at the beginning support the Social Democrats and no persons who consented at the end do. This assumption should be met in this study because the initial allocation to the beginning and end experiments was random. 
 
-To declare a group as a suitable counterfactual group, the counterfactual group has to be equal distributed characteristics to the observed group. Since we have consenters, we have a decision, be it conscious or not, who select themselves to be in a treatment group. Although the respondents were randomly allocated to get the linkage consent question at the beginning or at the end, these who gave consent at the beginning are different than those who gave consent at the end. To estimate the true effect of the linkage question, one has to account for this selection bias and isolate this effect. Therefore we need to achieve balance of the covariates between both groups to simulate a randomized distribution\footnote{Selection bias applies for the first solution too. Even if we had individual related administrative data for non-consenters, we have to assume that both groups differ from each other.} and be able to calculate the `true' treatment effect.
+Third, the conditional independence assumption holds that balancing the observed variables is sufficient and also balances all relevant unobserved variables (\cite{Imbens14}). This assumption, also called strong ignorability (\cite{Stuart10}), is fundamentally untestable (\cite{Imbens04}). The best we can do is argue that we have included as many variables as possible, what \cite{Stuart10} calls the ``kitchen sick'' method.
 
-\subsection{The entropy balance approach}
+We apply the entropy balancing model to X variables derived from the administrative data, survey paradata and from random assignment to experimental conditions (Table \ref{tab:covariates}). From the administrative data we have both demographic characteristics as well as  variables related to respondents' labor market history. We include indicators of the two experiments not involved in the construction of our treatment and control groups: the consent question wording experiment (gain vs loss framing) and the two methods of transfering addresses to the data collection contractor (opt-out vs control).\footnote{As discussed in Section \ref{sec:survey}, we drop all cases in the Opt-In condition, due to concerns that people who opt-in to a survey have different survey response behavior. We also note that no other surveys use this recruitment method and thus the results of that experiment do not generalize to other environments.} We also use four interviwer characteristics and two variables from the call record data set. 
 
-There are several techniques that are named under propensity score matching, which are used in observational studies estimate the `true' treatment effect (\cite{Antonjietal05}, \cite{Morgan01}). All techniques share the same basic approach to control a set of observed covariates (X).
-
-If one wants to match or balance out two groups over a set of covariates it is hard to do it over an exact matching. To achieve balance we will use a technique proposed by Hainmueller (2012) called entropy balance. Entropy balancing goes the reverse way of the propensity score reweighting. With the reweighting method researchers calculate unit weights with a logistic or probabilistic regression and then check for balance. Entropy balance estimates the weights for the control group cases directly from the imposed balance constraints (\cite{Hainmueller12}). These balance constraints are three moments: mean, variance and skewness. For this study we control the first moment constrain, the mean. To control higher moments reduces the chance of the entropy balance scheme to achieve convergence. In addition, controlling the mean as a moment constrain is often sufficient to balance out the variance and skewness of further moments too (\cite{Hainmuelleretal13}).
-
-If the propensity score model does not work because the model is misspecified, researchers have to readjust the model and do the same process again until it works. Entropy balance on the other side takes this burden from the researcher (\cite{Hainmueller12}).
-
-To have balanced covariates between two groups the literature relies on three assumptions: the Stable Unit Treatment Assumption Value Assumption (SUTVA), the conditional independence Assumption and the overlap assumption.
-
-The Stable Unit Treatment Value Assumption implies that the cases do not depend on each other in terms of who is in the treatment group or how large the treatment group is. It assumes that there are no spill-over effects and that responses are not dependent of the response of other units (Rubin80, Holland86).
-
-The second assumption is the conditional independence assumption. It assumes that a set of covariates \(X_{i}\) is not affected by the treatment (\cite{Caliendoetal08}).
-
-Third assumption is the overlap assumption. This assumption implies that in the treated and in the control group are persons with identical characteristics (\cite{Heckmanetal98}). That means for all covariates (X) must be a positive probability to one of both groups because is there a covariate that is either treated or non-treated the persons cannot be compared.
-
-In observational data, as the data we use it, these assumptions are not covered and we would compare groups that are not randomized. Therefore we would have a bias and naive estimation of the treatment effect. With the entropy balance scheme we simulate a randomized assignment.
-
-Because we cannot observe any important variable, we cannot adjust all covariates. To fulfill the conditional independence assumption it requires to have all covariates observed that influence the treatment assignment and the outcome. This assumption to have no unobserved differences between the treatment and control group is also called strong ignorability (\cite{Stuart10}) but this is not testable tough (\cite{Imbens04}). This approach is therefore an approximation to the randomized allocation. But usually it is assumed to have all important covariates covered.
-
-\subsection{Covariates for balance}\label{covar}
-	
-To regain balance between the treatment and the control group to simulate a randomized distribution between both groups it is important to include all known variables that are related to the treatment assignment and the outcome (\cite{Stuart10}). Including all available covariates makes it more likely that the strong ignorability assumption is satisfied. Further the listed variables presented below have not consequently an effect on the treatment assignment or outcome, at least not one that is viewable immediately. Here we follow the kitchen sink approach, which recommends to take all available variables into account. Indeed variables that are unassociated can increase the variance of the analysis but excluding important variables can increase the bias (\cite{Stuart10}).
-
-For our model I use mostly variables from the administrative data, because it is the hypothesis of this thesis that consenting to the administrative data linkage question has an impact on the response behavior. Therefore the survey data after the administrative data linkage question may be corrupted. If we would balance the treatment and control group on variables in the survey data, we would get a treatment effect of zero because all possible effects are balanced out. In fact to balance both groups and keeping the effects of interest we have to exclude any variable that may be affected by the treatment of interest and use only variables that are fixed over time or measured before treatment (\cite{Rosenbaum84}, \cite{Frangakisetal02}, \cite{Greenland03}, \cite{Caliendoetal08}).
-
-Administrative data is process data. To make this data useable for the entropy balancing model we have to adjust this data to time-moment variables. For this study we support the variables being used through the fact that they were already used in a previous study that obtained balance between treatment and control group with a propensity score reweighting model (\cite{Bach15}).
-
-The variables are summarized in Table \ref{tab:covariates}. Variables among others which are included in this model are year of birth and gender. Both variables were used as a verifier to determine the right respondents and asked before the linkage question. Therefore if year of birth and gender do not correspond between administrative and survey data I assume a wrong match and exclude these cases from the analysis (see \ref{mergeing} Merging the survey data with the administrative data, p.\pageref{merging}) So those two variables are not corrupted by administrative data linkage question and can be applied to the model. Further variables are the education and the west/east variables.
+In developing the entropy balance weights, We do not use the survey data themselves, because our research question concerns whether and how treatment (consenting to the linkage question at the beginning of the survey) changes survey responses. If we were to balance the treatment and control groups on variables in the survey data, we would remove some of the treatment effect that we wish to estimate. Following advice from \cite{Rosenbaum84}, \cite{Frangakisetal02}, \cite{Greenland03}, \cite{Caliendoetal08}, and \cite{Stuart10}, we exclude from our balancing approach any variable that is affected by the treatment of interest and use only variables that are time invariant or measured before treatment. 
 
 \input{XXXX_tab_covariates}
 
-Next to sociodemographic variables, the administrative data provides a number of Labor market history variables. For every person we can calculate the mean duration, total duration and the number of spells for the unemployment benefit receipt I and II, ALMP participation, Employment, Unemployment and Job Seeking. With these variables are some facts to mention. As told before the administrative data is organized in spells. Every time something employment related does change in the live of a person, like a change of income or the amount of benefit receipts a new spell is added. So with any change within one of the six presented categories above the mean duration of that person in that category drops because it is calculated from the total duration and the number of spells of the same category. Therefore: the higher the change within the category the lower the mean duration. Normally this would be a problem as these variables have a high bias. But since it is our aim to regain balance and therefore to predict a right weight for each case to get that balance, we do not need to interpret this model and therefore these variables do not need to be interpretable. Instead we assume a randomized distribution for the variables weakness over all cases.
-
-Another variable being taken into the model is the share of different employers to the time of extraction of the administrative data.
-
-Other variables that should join the entropy balance model is the sample selection and the loss/ gain-frame experiment of the administrative data linkage question.
-
-A last group of variables I include to the entropy balance model are interviewer characteristics and call record data. These variables can only be included in the entropy balance model for the CATI data. For interviewer characteristics age, gender, education and interviewer experience is included. For the call record data the number of contacts and the contact time serve as indicators. Interviewer characteristics are known to be related to nonresponse (\cite{Grovesetal92},\cite{Grovesetal00}, \cite{Sinibaldietal15}). As interviewers are randomly assigned to the respondents these variables seem not important because we have no information about non-respondent. But obtaining consent can be seen as a second layer of non-response (\cite{Sakshaug13}). Also Interviewer characteristics can impact the respondents' decision to consent to the administrative data linkage question (\cite{Beste11}, \cite{Sakshaugetal13}, \cite{Salaetal10}). For the Call record data we know that hard to get respondents can differ in their responses from the respondents that are easy and earlier to interview in the field period (\cite{Kreuteretal14}).
-
-To test if the covariates are really balanced out we check the standardized mean differences. To evaluate the standardized mean differences as sufficient a deviation up to five percent is decent (\cite{Caliendoetal08}). Therefore every entropy balance model that has a deviation of the standardized mean differences over five percent is labeled as non-working.
+To test if the covariates are balanced, we compute the standardized mean differences GIVE FORMULA HERE. A standardized mean differences greater than five percent in one more is a sign that balance has not been achieved (\cite{Caliendoetal08}). 
 
 \subsection{Treatment Effect Estimation}
 
-Further I evaluate the treatment effect for several variables. For each variable we have a different amount of cases. So basically we need to rerun our method to regain balance for the amount of cases for each analysis variable.
+To estimate the treatment effect we use simple regression models where the dependent variable is $\epsilon_{j,i}$ and the sole independent variable is the treatment indicator ($0$ for cases in the control group, $1$ for those in the treatment group). We apply the weights from the entropy balance model and estimate robust standard errors to protect against heterogeneity. If our weights balance the treatment and control group on all observed and unobserved characteristics such that the only remaining difference between them is treatment itself, then the coefficient on the treatment effect indicator is our estimate of the effect of giving consent at the beginning of the survey on later measurement error. A positive coefficient is evidence for the better-respondent hypothesis, and a negative coefficient is evidence for the worse-respondent hypothesis.
 
-To estimate the treatment effect we use simple regression models with the treatment indicator as the independent variable, the weights from the entropy balance model applied and robust standard errors. Since we evaluate the effect of consenting to the linkage question at the beginning of the interview on the measurement error most variables are binary coded  (\(0=true\ report, 1=false \ report\)). Therefore we compute regressions with two binary variables. Usually that is bad style. In this case it seems to be a good and also better choice than a probabilistic regression that is usually used with a binary outcome because the interpretation is easier.
-
-The weights for the regression model are calculated from the entropy balance model we presented. The entropy balance model calculates weights for the control group so that they equal the treatment group. If we proceed like this, we calculate the average treatment effect of the treated (ATT). This one measures the increase of the outcome variable due to receipt of treatment among those who choose treatment. The average treatment effect of the treated is the most common in observational studies because most treatments rely on a decision like the decision to attend college or not.
-
-To show the effect of balancing we also give the naive estimation of the average treatment effect of the treated. We run the same analysis but without the weight applied in the regression models.
-
-\section{Dependent variables for the treatment effect estimation}\label{variables}
-
-This study cannot test all existing variables in the data. The reason therefore is that the data structure for questions asked in the survey is not equal to the data structure of the administrative data. Therefore adjustment is necessary and the analysis is limited on a few variables. The items of interest are employment status, begin of employment, nationality and income. There are differences in terms of number of analyzable variables between the CATI and web survey because the latter is shortened. According to the hypotheses the measurement error should increase for the group that consented to the linkage question at the beginning, because respondents care less about accurately answering the questions (worse-respondent hypothesis). If the better-respondent hypothesis applies the measurement error should decrease because respondents may take more effort to answer the questions.
-
-\subsection{Employment variables}
-
-We focus on two employment variables and their peculiarities. First is the current employment status\footnote{Translation by first author.}:
-
-\begin{quote}
-\begin {small}
-In the following I like to talk with you about your job biography over the last years. We like to know for example if you were employed, in vocational training or reported as unemployed or if you did something completely different. It is important that you mention every activity in particular, even if it lasted just for a short time. If several activities took place at the same time, please mention your main employment.
-
-Let us start with today: what of the following applies to you? Are you currently \ldots
-
-1 employed, that also includes side- or mini jobs
-
-2 reported as unemployed, that also includes a participation in an active labor market program from the federal agency of employment
-
-3 student
-
-4 in advanced training, vocational training or applicant of a college
-
-5 something completely different
-
-* do not know/ no answer
-
-(Interviewer) Note: If there were parallel periods of employments the employment with the highest amount of working hours is the most wanted. Under employment we want also capture side-jobs of students, housewives and pensioners. So called mini-jobs (also referred to as 400 or 450 \euro \ jobs) are included too.
-\end{small}
-\end{quote}
-
-We recode this question to a binary variable whereas employed is still classified as employed and all other categories are classified as non-employed (except for do not know and no answer, these are missing values). After this question a number of other questions followed to get information about the period of employment or unemployment.
-
-We check with the administration data if the respondent misreports about his\textbackslash her employment or not.
-
-There are certain problems, if one wants to compare the employment status from a survey with the employment status from the Integrated Employment Biographies data. As written before the administrative data is structured in spells about employment and unemployment periods. Their transitions can be categorized in flow, overlap and gap (see \ref{admin} Administrative data, p. \pageref{admin}). These different kinds of transitions make it really hard to compare the values because we can not just take the current spell and compare it with the answer. We could get a benefit drawing spell but actually the respondent is employed of a minimum wage basis.
-
-Another problem is that we cannot account for progress in the job. For example a person begins his\textbackslash her employment as an intern. After that (s)he gets a full-time employment with a flow transition. For the next ten years until today (s)he gets promoted four times and becomes a new employment position with another role, tasks and maybe another job location within his\textbackslash her establishment\footnote{Please remember that every time something changes in the job situation of a person a new spell will be generated}. If we ask, whether this person is employed or not, we can approve that (s)he is. But when did his\textbackslash her employment actually start: with his\textbackslash her internship, the begin of full-time employment, the last promotion or anything in between?
-
-There are various other combinations of biographies. This study cannot explore or account for all of these combinations by collapsing and sorting the spells from the administrative data. Fact is that there is a huge room for interpretation for the respondents to answer. If we collapse and sort the spells, we get messed up data and analyses. Therefore we have to approach differently.
-
-To figure out if the respondent stated the right employment status to the time of the interview, we use the begin date of his\textbackslash her current employment status. For each category that the respondent could choose for their employment status, the begin date was asked too. That means there should be no change in employment status after this date.
-
-The second question of interest I focus on is a follow up question about the start date of the employment:
+We can calculate measurement error for all variables that are in both the survey and the administrative data. These variables are given in Table X.  Many of the variables for which we calculate measurement error are dichotomous or categorical and thus measurement error $\epsilon_{j,i}$ is best mesaured as an indicator of error: $I(\text{response}_{j,i} \neq \text{admin}_{j,i})$. These variables are flagged in the third column of Table X. \textbf{Table X also shows that the number of cases available for each variable change, due to skip patterns and missing data.} For each set of cases, we rerun the entropy balancing technique and create new sets of weights. Question text and notes about how the survey and administrative variables were coded are given in Appendix A.
 
 
-\begin{quote}
-\begin {small}
+\section{Results}
 
-When did your current period of employement which this employer begin?
+Intro here
 
-\end{small}
-\end{quote}
-
-The respondents had the chance to state the month and year of the begin date. To calculate the measurement error variable, I take the minimum difference between the date stated in the survey and the dates in the administrative data employment spells as the deviation from the true score. The deviation is an absolute value \((\Delta_{begin \ date}\geq0\)) to ensure that negative and positive deviations do not cancel each other out in the analysis.
-
-For respondents exact dates are the hardest to remember (\cite{Wagenaar86},\cite{Friedman93}). Luckily the respondents had only to remember the month and the year.
-
-In the CATI Survey, if respondents did not know about the month in which their employment began, they had the chance to state a season instead. Worse-respondents should be more likely to use this option because they try to avoid the cognitive effort of searching the exact month in their memory. It is also possible that the respondent fails to retrieve a season. Therefore we have item non-response. For the study we do not stagger between item non-response and choose a season instead of a month but see both as a refusal to retrieve an exact month. Anyway, if the consent to the administrative data linkage question leads to better-respondents, respondents who consented at the beginning should have stated the month more often than if they would have not consented.
-
-Respondents could not state a season in the web survey as they were asked about a begin month. Therefore this categories that trigger the behavior to put less effort to answer the question drop out. For the web survey the item non-response for the begin date is stated regardless of whether the respondent did not know the month or the year of his\textbackslash her current employment.
-
-Concerning the hypotheses the outcomes should be the same for the web data as for the CATI data.
-
-%To ensure valid measurement errors we only use cases which stated an begin date of employment before 1993 for the error indicator of employment status and the minimum deviation of the begin date of employment. In west Germany the record of employment biographies started in 1975. For east Germany it started 1993. Between the reunion of Germany and the start of recording employment biographies are three years with high mobility of german citizens. In this period we cannot be for sure if respondents worked in east or west Germany. If they worked in east Germany the
-
-\subsection{Citizenship and Income}
-
-This study evaluates the measurement error on two additional variables. The first one is the variable `Citizenship', whether the respondent is German or not. The nationality of most persons does not change over one year and thus it is okay to test even if the data has a one year gap. Unfortunately this question was not asked in the web survey and can therefore only be tested for the CATI data.
-
-The second variable added is the `Income'. The income in the survey data was asked for a specific period of the loop and refers to the year of 2013\footnote{Translation from author.}:
-
-
-\begin{quote}
-\begin {small}
-
-What was your gross annual income from this job [occupation from the loop] in year 2013?
-
-(Interviewer) Note: Please do not include any extra payments , such as vacation allowance, Christmas allowance, an extra monthly salary, profit participations or bonuses.
-
-\end{small}
-\end{quote}
-
-
-Since the Integrated Employment Biographies has the data until the end of 2013, it can be compared. The deviation of the true income is similarly as the begin date stated in absolute values to ensure that negative and positive values do not cancel each other out.
-
-Income is a sensitive question (\cite{Tourangeauetal07}). If there is a measurement error due to consenting to linkage at the start of the survey, this variable should show it, because even if the respondents already consented to a sensitive question (the administrative data linkage question) the income question has another quality of intrusiveness. Asking for linkage consent is very conceptional and respondents can only imagine what kind of data the administration data contains. The income question on the other side is more in someones reach because money plays such an important role in a lot of peoples life's. The effect for worse-respondents and better-respondents should get amplified. In addition, to summarize the income of one or more jobs in one year needs a lot of cognitive effort and therefore our hypotheses should apply even if the hypothesis about the different quality of intrusiveness is wrong.
-
-As income is a sensitive question we have a high item non-response rate for this variable (16.9\% for CATI and 35.2\% for web). Therefore we check if the these rates change between the treatment and control group. If the worse-respondents hypothesis applies we should have a higher item non-response rate for the treatment group. The cognitive effort of summarizing the income for 2013 should be amplified by the sensitivity. Better-respondents on the other side should not show a strong effect because the sensitivity of income counters it. That means even if better-respondents try to optimize their responses, they non-respond because the income question may be to intrusive.
-
-\subsection{Covariate balance for the dependent variables}
-
-Due to different variables we have different sample sizes and need to apply the entropy balance model for each variable. Figure \ref{fig:balance} shows the weighted and unweighted standardized mean differences between the treatment and control group for the variable misreport in employment status. As mentioned, before the means should not differ more than five to be recognized as balanced (\cite{Caliendoetal08}). As we can see in our example, 25 of 47 variables in the model have higher standardized mean difference than five percent before balancing. With the entropy balance method, we can balance these to nearly zero for each covariate. Therefore the model accomplishes his purpose.
+\subsection{Testing balance}
+Figure \ref{fig:balance} shows the weighted and unweighted standardized mean differences between the treatment and control group for the variable misreport in employment status. As mentioned, before the means should not differ more than five to be recognized as balanced (\cite{Caliendoetal08}). As we can see in our example, 25 of 47 variables in the model have higher standardized mean difference than five percent before balancing. With the entropy balance method, we can balance these to nearly zero for each covariate. Therefore the model accomplishes his purpose.
 
 Unfortunately not all the analysis variables could be balanced out. Table \ref{tab:achieved_balance} (p. \pageref{tab:achieved_balance}) shows the 14 variables and the summarized standardized mean differences from the CATI and web data. The column of interest is the third and seventh: number of standardized differences \textgreater5 after weighting. As the guideline is that the standardized mean differences should be smaller than five (\cite{Caliendoetal08}) the entropy balance scheme failed for all variables that have at least one difference greater than five. For the CATI data the variable misreport in employment status for the respondents who stated non-employment could not be balanced out. Therefore we cannot calculate the average treatment effect for this one variable in the CATI data.
 
@@ -264,7 +119,7 @@ If we compare the achieved balances in both modes, it seems like in the CATI dat
 
 \newpage
 \begin{figure}[b]
-\caption{Weighted and unweighted standardized mean differences between treatment and control group for the misreport in employment status (n=736)}
+\caption{Standardized Mean Differences before and after Weighting (n=736)}
 \centering
 \includegraphics[scale=0.4]{balance.pdf}
 \label{fig:balance}
@@ -272,7 +127,7 @@ If we compare the achieved balances in both modes, it seems like in the CATI dat
 
 \input{XXXX_tab_achieved_balance.tex}
 
-\section{Results}
+\subsection{Treatment Effects}
 
 In Table \ref{tab:tab_estimates} we can see the average treatment effects of the treated (ATT) that consent to the administrative data linkage question has on our selected variables. In contrast there is the estimation without the balanced covariates referred to as naive estimation. To get the average treatment effect and the naive estimation, a simple regression was used. Misreport in employment status is a binary coded variable (\(0=true\ report, 1=false \ report\)). Therefore we see the change of proportion that comes with the treatment. For example the treatment effect of 0.02 is a change of two percentage points through the treatment of consenting to the linkage question at the beginning of the interview. That means due to the administrative data linkage question 15 (out of 736) more people misresport their employment status. This effect, if true, would support our worse-respondent hypothesis: the error due to the linkage question increases. On the other sid a negative coefficient would support the better-respondent hypothesis.
 
@@ -341,6 +196,9 @@ In this study, only respondents that consented to the administrative data linkag
 Further we cannot make any statements for non-consenters. Maybe the administrative data linkage question has an effect on the response behavior and our hypotheses apply to that. But that cannot be tested because non-consenters cannot be linked to administrative data\footnote{In fact there is one study that overcomes this restriction: Sakshaug and Kreuter 2012.}.
 
 Who consents and who does not depends on survey topic and design of the study. We want to ask for linkage at the beginning of the interview because that gives the highest consent rates but we worry that the linkage question changes the behavior of the respondents in a way that they make less effort in answering the survey questions. The results of this study suggest that we do not have to worry about that. Therefore we like to encourage survey designers and researchers to ask the administrative data linkage question at the beginning of the questionnaire.
+
+\appendix{Calculating Measurement Error}
+\include{appendix}
 
 
 %%% Local Variables:
