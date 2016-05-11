@@ -36,9 +36,9 @@ The Institute for Employment Research conducted a survey in Fall 2014 to investi
 
 \texttt{Why 1034 here? does not match 1208 or 1128 given below. LET'S REVIEW THESE NUMBERS TO MAKE SURE THEY'RE THE ONES WE WANT}
 
-The survey contained three fully-crossed experiments. Two experiments were designed to evaluate the effects of wording and placement of the administrative data linkage question on consent rates. Approximately half of the respondens were asked at the beginning ofthe survey (n=611) and half were asked at the end (n=592). The wording experiemnt on this question involved gain versus loss framing, where gain framing is XYZ and loss framing is ABC. Table \ref{tab:consentrates} shows that linkage consent rates were higher when the question was asked in the beginning, as shown in previous studies. The table also shows that the wording experiment did not significantly affect consent rates in the telephone survey. FOr more analysis of these two consent experiments, see CITE.
+The survey contained three fully-crossed experiments. Two experiments were designed to evaluate the effects of wording and placement of the administrative data linkage question on consent rates. Approximately half of the respondens were asked at the beginning ofthe survey (n=611) and half were asked at the end (n=592). The wording experiemnt on this question involved gain versus loss framing, where gain framing is XYZ and loss framing is ABC. Table \ref{tab:consentrates} shows that linkage consent rates were higher when the question was asked in the beginning, as shown in previous studies. The table also shows that the wording experiment did not significantly affect consent rates in the telephone survey. For more analysis of these two consent experiments, see CITE.
 
-\texttt{911 + 592 = 1203 -- ??}
+\texttt{611 + 592 = 1203 -- ??}
 
 \input{XXXX_tab_consentrates}
 
@@ -65,9 +65,11 @@ THESE NUMBERS DO NOT MATCH SECTION 3.1
 The linked survey and administrative data allow us to calculate measurement error in respondent reports and thus test our hypotheses. $\epsilon_{j,i}$,  measurement error in question $j$ for respondent $i$, is:
 
 \begin{equation}
-\epsilon_{j,i} = \text{response}_{j,i} - \text{admin}_{j,i}
+\epsilon_{j,i} = |\text{response}_{j,i} - \text{admin}_{j,i}|
 \label{eq:hyp_epsi}
 \end{equation}
+
+TLK ABOUT WHY ABS
 
 However, we cannot simply compare the average measurement error among those who granted linkage consent at the beginning of the questionnaire with those who did so at the end, because the two sets of consenters are not equivalent.  Although assignment to the beginning and end experimental groups was random, the cases who consented at the beginning are somewhat different than those who consented at the end (as we can see already in the differing consent rates in Table \ref{tab:consentrates}. 
 
